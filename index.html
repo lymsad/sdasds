@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部黑色区域（含黄色雨伞+搜索框） -->
+    <header class="top-bar">
+        <img src="https://img.icons8.com/fluency/96/ffff00/umbrella.png" alt="黄色雨伞" class="umbrella">
+        <input type="text" placeholder="搜索" class="search-input">
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <a href="#home" class="nav-item active" data-target="home">首页</a>
+        <a href="#middle-school" class="nav-item" data-target="middle-school">我的中学</a>
+        <a href="#hometown" class="nav-item" data-target="hometown">我的家乡</a>
+        <a href="#message" class="nav-item" data-target="message">留言板</a>
+        <a href="#personal" class="nav-item personal-link">我的个人网页</a>
+    </nav>
+
+    <!-- 内容容器（不同页面内容） -->
+    <div class="content-container">
+        <!-- 首页内容 -->
+        <section id="home" class="content-page active">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="https://img.haopic.me/2023/04/20230428201531141.jpg" alt="个人头像" class="avatar">
+                <ul class="info-list">
+                    <li>• 姓名: 朱武坤</li>
+                    <li>• 性别: 男</li>
+                    <li>• 年龄: 20</li>
+                    <li>1. 健康状况: 良好</li>
+                    <li>2. 学号：23170404040</li>
+                    <li>3. 民族: 汉族</li>
+                    <li>4. 政治面貌: 共青团员</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 我的中学内容 -->
+        <section id="middle-school" class="content-page">
+            <h2>我的中学</h2>
+            <p>我的中学是XX市第一中学，是当地的重点中学，校园环境优美，师资力量雄厚。在这里我度过了充实的三年时光，结识了很多好朋友。</p>
+        </section>
+
+        <!-- 我的家乡内容 -->
+        <section id="hometown" class="content-page">
+            <h2>我的家乡</h2>
+            <p>我的家乡在XX省XX市，这是一个风景秀丽的城市，有著名的XX景点，当地的特色美食是XX，欢迎大家来游玩！</p>
+        </section>
+
+        <!-- 留言板内容 -->
+        <section id="message" class="content-page">
+            <h2>留言板</h2>
+            <div class="message-form">
+                <input type="text" placeholder="你的名字" class="msg-name">
+                <textarea placeholder="请输入留言内容" class="msg-content"></textarea>
+                <button class="msg-submit">提交留言</button>
+            </div>
+            <div class="message-list"></div>
+        </section>
+    </div>
+
+    <!-- 底部黑色区域 -->
+    <footer class="footer">
+        <p>个人网页</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
