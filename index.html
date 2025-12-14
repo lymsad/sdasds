@@ -3,363 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 欢迎来到91剧场- 中世纪沙盒游戏</title>
-    <!-- 引入Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入Font Awesome图标 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- 自定义Tailwind配置 -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // 中世纪风格配色
-                        medieval: {
-                            red: '#9B2226',
-                            gold: '#E9D8A6',
-                            brown: '#5C4033',
-                            dark: '#0F172A',
-                            light: '#F8FAFC'
-                        }
-                    },
-                    fontFamily: {
-                        medieval: ['Cinzel', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- 自定义样式 -->
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-shadow {
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            }
-            .bg-overlay {
-                background-color: rgba(0, 0, 0, 0.6);
-            }
-            .section-padding {
-                padding: 6rem 0;
-            }
-        }
-    </style>
-    
-    <!-- 引入谷歌字体 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>我的个人网页</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="font-medieval bg-medieval-dark text-medieval-light">
-    <!-- 导航栏 -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-medieval-gold">骑马与砍杀</a>
-            
-            <!-- 桌面导航 -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="hover:text-medieval-gold transition-colors">游戏介绍</a>
-                <a href="#features" class="hover:text-medieval-gold transition-colors">核心特色</a>
-                <a href="#factions" class="hover:text-medieval-gold transition-colors">阵营势力</a>
-                <a href="#screenshots" class="hover:text-medieval-gold transition-colors">游戏截图</a>
-            </div>
-            
-            <!-- 移动端菜单按钮 -->
-            <button id="menuBtn" class="md:hidden text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        
-        <!-- 移动端导航菜单 -->
-        <div id="mobileMenu" class="md:hidden hidden bg-medieval-dark/95 backdrop-blur-sm absolute w-full">
-            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-                <a href="#about" class="py-2 hover:text-medieval-gold transition-colors">游戏介绍</a>
-                <a href="#features" class="py-2 hover:text-medieval-gold transition-colors">核心特色</a>
-                <a href="#factions" class="py-2 hover:text-medieval-gold transition-colors">阵营势力</a>
-                <a href="#screenshots" class="py-2 hover:text-medieval-gold transition-colors">游戏截图</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 英雄区 -->
-    <header class="h-screen flex items-center justify-center relative">
-        <div class="absolute inset-0 z-0">
-            <img src="https://picsum.photos/id/1076/1920/1080" alt="骑马与砍杀背景图" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-overlay"></div>
-        </div>
-        
-        <div class="container mx-auto px-4 z-10 text-center">
-            <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-medieval-gold mb-6 text-shadow">
-                骑马与砍杀
-            </h1>
-            <p class="text-[clamp(1rem,3vw,1.5rem)] mb-8 max-w-3xl mx-auto text-shadow">
-                一款自由度极高的中世纪沙盒角色扮演游戏，征服大陆，建立你的传奇
-            </p>
-            <a href="#about" class="inline-block bg-medieval-red hover:bg-medieval-red/80 text-medieval-gold px-8 py-3 rounded-md transition-all hover:scale-105">
-                了解更多
-            </a>
-        </div>
-        
-        <!-- 滚动提示 -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-medieval-gold text-2xl">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
+<body>
+    <!-- 顶部黑色区域（含黄色雨伞+搜索框） -->
+    <header class="top-bar">
+        <img src="https://img.icons8.com/fluency/96/ffff00/umbrella.png" alt="黄色雨伞" class="umbrella">
+        <input type="text" placeholder="搜索" class="search-input">
     </header>
 
-    <!-- 游戏介绍 -->
-    <section id="about" class="section-padding bg-medieval-light text-medieval-dark">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-medieval-red mb-8 text-center">游戏介绍</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <p class="mb-4 text-lg">
-                        《骑马与砍杀》（Mount & Blade）是由TaleWorlds Entertainment开发的一款动作角色扮演类游戏，
-                        最初于2008年发布。游戏以其极高的自由度、丰富的游戏性和独特的中世纪战斗系统著称。
-                    </p>
-                    <p class="mb-4 text-lg">
-                        在游戏中，你可以扮演一名雇佣兵、商人、骑士或叛军领袖，通过战斗、贸易、外交等方式
-                        逐步积累财富和声望，最终统一卡拉迪亚大陆。
-                    </p>
-                    <p class="text-lg">
-                        游戏不仅有单人模式，还支持多人联机对战，让你可以和其他玩家一起体验中世纪战场的热血与激情。
-                    </p>
-                    
-                    <div class="mt-8 flex space-x-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-gamepad text-medieval-red text-xl mr-2"></i>
-                            <span>开放世界</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-swords text-medieval-red text-xl mr-2"></i>
-                            <span>实时战斗</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-users text-medieval-red text-xl mr-2"></i>
-                            <span>角色扮演</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="rounded-lg overflow-hidden shadow-xl">
-                    <img src="https://picsum.photos/id/1058/800/600" alt="骑马与砍杀游戏画面" class="w-full h-auto">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <a href="#home" class="nav-item active" data-target="home">首页</a>
+        <a href="#middle-school" class="nav-item" data-target="middle-school">我的中学</a>
+        <a href="#hometown" class="nav-item" data-target="hometown">我的家乡</a>
+        <a href="#message" class="nav-item" data-target="message">留言板</a>
+        <a href="#personal" class="nav-item personal-link">我的个人网页</a>
+    </nav>
 
-    <!-- 核心特色 -->
-    <section id="features" class="section-padding bg-medieval-dark">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-medieval-gold mb-8 text-center">核心特色</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- 特色1 -->
-                <div class="bg-medieval-dark/50 border border-medieval-brown p-6 rounded-lg hover:bg-medieval-brown/20 transition-all">
-                    <div class="text-medieval-gold text-3xl mb-4">
-                        <i class="fas fa-horse"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-medieval-gold mb-3">骑乘战斗</h3>
-                    <p>独特的骑马战斗系统，体验中世纪骑士冲锋的快感。你可以在马背上使用长枪、弓箭、剑等各种武器。</p>
-                </div>
-                
-                <!-- 特色2 -->
-                <div class="bg-medieval-dark/50 border border-medieval-brown p-6 rounded-lg hover:bg-medieval-brown/20 transition-all">
-                    <div class="text-medieval-gold text-3xl mb-4">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-medieval-gold mb-3">超高自由度</h3>
-                    <p>无固定剧情，你可以自由选择自己的人生道路。成为商人、强盗、领主或国王，一切由你决定。</p>
-                </div>
-                
-                <!-- 特色3 -->
-                <div class="bg-medieval-dark/50 border border-medieval-brown p-6 rounded-lg hover:bg-medieval-brown/20 transition-all">
-                    <div class="text-medieval-gold text-3xl mb-4">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-medieval-gold mb-3">军队指挥</h3>
-                    <p>招募和指挥各种兵种，制定战术策略。从单个士兵到千人大军，体验指挥战场的乐趣。</p>
-                </div>
+    <!-- 内容容器（不同页面内容） -->
+    <div class="content-container">
+        <!-- 首页内容 -->
+        <section id="home" class="content-page active">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="https://img.haopic.me/2023/04/20230428201531141.jpg" alt="个人头像" class="avatar">
+                <ul class="info-list">
+                    <li>• 姓名: 张三</li>
+                    <li>• 性别: 男</li>
+                    <li>• 年龄: 22</li>
+                    <li>1. 健康状况: 良好</li>
+                    <li>2. 联系方式: 13**********</li>
+                    <li>3. 民族: 汉族</li>
+                    <li>4. 政治面貌: 共青团员</li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 阵营势力 -->
-    <section id="factions" class="section-padding bg-medieval-light text-medieval-dark">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-medieval-red mb-8 text-center">阵营势力</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 罗多克王国 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                    <img src="https://picsum.photos/id/1047/600/400" alt="罗多克王国" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-medieval-red mb-2">罗多克王国</h3>
-                        <p class="text-gray-700">以山地防御和弩手著称的王国，擅长防御战和远程攻击，是对抗骑兵的好手。</p>
-                    </div>
-                </div>
-                
-                <!-- 斯瓦迪亚王国 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                    <img src="https://picsum.photos/id/1039/600/400" alt="斯瓦迪亚王国" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-medieval-red mb-2">斯瓦迪亚王国</h3>
-                        <p class="text-gray-700">卡拉迪亚大陆的核心王国，拥有最强的重骑兵和完善的兵种体系，综合实力强大。</p>
-                    </div>
-                </div>
-                
-                <!-- 维吉亚王国 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                    <img src="https://picsum.photos/id/1040/600/400" alt="维吉亚王国" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-medieval-red mb-2">维吉亚王国</h3>
-                        <p class="text-gray-700">北方的冰雪王国，以精锐弓箭手和重步兵闻名，适合各种地形作战。</p>
-                    </div>
-                </div>
-                
-                <!-- 库吉特汗国 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                    <img src="https://picsum.photos/id/1043/600/400" alt="库吉特汗国" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-medieval-red mb-2">库吉特汗国</h3>
-                        <p class="text-gray-700">草原上的游牧民族，拥有快速机动的骑射手，擅长游击和机动作战。</p>
-                    </div>
-                </div>
-                
-                <!-- 萨兰德苏丹国 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                    <img src="https://picsum.photos/id/1037/600/400" alt="萨兰德苏丹国" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-medieval-red mb-2">萨兰德苏丹国</h3>
-                        <p class="text-gray-700">南方沙漠王国，拥有强大的马穆鲁克重骑兵，攻防兼备。</p>
-                    </div>
-                </div>
-                
-                <!-- 诺德王国 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                    <img src="https://picsum.photos/id/1045/600/400" alt="诺德王国" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-medieval-red mb-2">诺德王国</h3>
-                        <p class="text-gray-700">来自北方的海盗王国，拥有最强的步兵，擅长攻城和近身肉搏。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- 我的中学内容 -->
+        <section id="middle-school" class="content-page">
+            <h2>我的中学</h2>
+            <p>我的中学是XX市第一中学，是当地的重点中学，校园环境优美，师资力量雄厚。在这里我度过了充实的三年时光，结识了很多好朋友。</p>
+        </section>
 
-    <!-- 游戏截图 -->
-    <section id="screenshots" class="section-padding bg-medieval-dark">
-        <div class="container mx-auto px-4">
-            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-medieval-gold mb-8 text-center">游戏截图</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1051/500/300" alt="游戏截图1" class="w-full h-auto">
-                </div>
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1053/500/300" alt="游戏截图2" class="w-full h-auto">
-                </div>
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1054/500/300" alt="游戏截图3" class="w-full h-auto">
-                </div>
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1055/500/300" alt="游戏截图4" class="w-full h-auto">
-                </div>
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1056/500/300" alt="游戏截图5" class="w-full h-auto">
-                </div>
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1057/500/300" alt="游戏截图6" class="w-full h-auto">
-                </div>
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1059/500/300" alt="游戏截图7" class="w-full h-auto">
-                </div>
-                <div class="rounded-lg overflow-hidden hover:scale-105 transition-all">
-                    <img src="https://picsum.photos/id/1060/500/300" alt="游戏截图8" class="w-full h-auto">
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- 我的家乡内容 -->
+        <section id="hometown" class="content-page">
+            <h2>我的家乡</h2>
+            <p>我的家乡在XX省XX市，这是一个风景秀丽的城市，有著名的XX景点，当地的特色美食是XX，欢迎大家来游玩！</p>
+        </section>
 
-    <!-- 页脚 -->
-    <footer class="bg-medieval-brown py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-medieval-gold mb-4">&copy; 2025 骑马与砍杀 游戏展示站</p>
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="text-medieval-light hover:text-medieval-gold transition-colors">
-                    <i class="fab fa-twitter text-xl"></i>
-                </a>
-                <a href="#" class="text-medieval-light hover:text-medieval-gold transition-colors">
-                    <i class="fab fa-facebook text-xl"></i>
-                </a>
-                <a href="#" class="text-medieval-light hover:text-medieval-gold transition-colors">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="#" class="text-medieval-light hover:text-medieval-gold transition-colors">
-                    <i class="fab fa-discord text-xl"></i>
-                </a>
+        <!-- 留言板内容 -->
+        <section id="message" class="content-page">
+            <h2>留言板</h2>
+            <div class="message-form">
+                <input type="text" placeholder="你的名字" class="msg-name">
+                <textarea placeholder="请输入留言内容" class="msg-content"></textarea>
+                <button class="msg-submit">提交留言</button>
             </div>
-            <p class="text-sm text-medieval-light/70">本网站仅用于展示，非官方网站</p>
-        </div>
+            <div class="message-list"></div>
+        </section>
+    </div>
+
+    <!-- 底部黑色区域 -->
+    <footer class="footer">
+        <p>个人网页</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // 导航栏滚动效果
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-medieval-dark/90', 'backdrop-blur-sm', 'shadow-lg');
-                navbar.classList.remove('py-4');
-                navbar.classList.add('py-2');
-            } else {
-                navbar.classList.remove('bg-medieval-dark/90', 'backdrop-blur-sm', 'shadow-lg');
-                navbar.classList.remove('py-2');
-                navbar.classList.add('py-4');
-            }
-        });
-        
-        // 移动端菜单
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            // 切换图标
-            const icon = menuBtn.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                // 关闭移动端菜单
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    const icon = menuBtn.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>

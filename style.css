@@ -1,0 +1,130 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", Arial, sans-serif;
+}
+
+/* 顶部黑色栏 */
+.top-bar {
+    background-color: #333;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    position: relative;
+}
+.umbrella {
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.search-input {
+    padding: 5px 10px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    width: 160px;
+}
+
+/* 导航栏 */
+.nav {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+}
+.nav-item {
+    color: #333;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 14px;
+}
+.nav-item.active {
+    color: #0066cc;
+}
+.personal-link {
+    color: #ff0000;
+    float: right;
+    margin-right: 0;
+}
+
+/* 内容容器 */
+.content-container {
+    padding: 30px 50px;
+    background-color: #fff;
+    min-height: 400px;
+}
+/* 页面内容（默认隐藏，仅active显示） */
+.content-page {
+    display: none;
+}
+.content-page.active {
+    display: block;
+}
+
+/* 首页About Me样式 */
+.about-container {
+    display: flex;
+    margin-top: 20px;
+}
+.avatar {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+.info-list {
+    list-style: none;
+    line-height: 2.2;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 留言板样式 */
+.message-form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+.msg-name, .msg-content {
+    padding: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.msg-content {
+    height: 100px;
+    resize: none;
+}
+.msg-submit {
+    padding: 8px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.message-list {
+    margin-top: 20px;
+}
+.message-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+.message-item span {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+/* 底部黑色栏 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
