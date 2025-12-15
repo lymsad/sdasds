@@ -3,160 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
-    <style>
-        /* 全局样式 */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #e0f7ff; /* 浅蓝色背景 */
-            font-family: "微软雅黑", sans-serif;
-        }
-
-        /* 头部样式 */
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-        }
-        .header h1 {
-            font-size: 40px;
-            color: #333;
-            text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-            margin: 0;
-        }
-        /* 装饰兔子图标（用文字替代，也可以换图片） */
-        .rabbit {
-            position: absolute;
-            font-size: 40px;
-            color: #fff;
-            text-shadow: 1px 1px 2px #999;
-        }
-        .rabbit1 {
-            top: 10px;
-            right: 50px;
-        }
-        .rabbit2 {
-            bottom: 10px;
-            left: 20px;
-        }
-        .rabbit3 {
-            bottom: 20px;
-            right: 30px;
-        }
-
-        /* 导航栏样式 */
-        .nav {
-            background-color: #fff;
-            padding: 10px 0;
-            border-bottom: 2px solid #f8bbd0;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 30px;
-            font-size: 16px;
-        }
-        .nav a:hover {
-            color: #ff69b4;
-        }
-
-        /* 主体内容容器 */
-        .container {
-            display: flex;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        /* 左侧“关于我”样式 */
-        .about-me {
-            flex: 1;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        .about-me h3 {
-            color: #ff69b4;
-            margin-top: 0;
-        }
-        .about-me p {
-            line-height: 2;
-            font-size: 14px;
-        }
-
-        /* 右侧“给我留言”样式 */
-        .message {
-            flex: 2;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        .message h3 {
-            background-color: #f8bbd0;
-            color: #fff;
-            padding: 8px;
-            margin-top: 0;
-            border-radius: 3px;
-        }
-        .message input, .message textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            box-sizing: border-box;
-        }
-        .message button {
-            background-color: #f8bbd0;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .message button:hover {
-            background-color: #ff69b4;
-        }
-    </style>
+    <title>罗宇航个人博客</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 头部区域 -->
-    <div class="header">
-        <div class="rabbit rabbit1">🐇</div>
-        <h1>Welcome！<br>- 我的个人主页 -</h1>
-        <div class="rabbit rabbit2">🐇</div>
-        <div class="rabbit rabbit3">🐇</div>
-    </div>
-
     <!-- 导航栏 -->
-    <div class="nav">
-        <a href="#">首页</a>
-        <a href="#">我的爱好</a>
-        <a href="#">我的日志</a>
-        <a href="#">联系我们</a>
-    </div>
-
-    <!-- 主体内容 -->
-    <div class="container">
-        <!-- 左侧：关于我 -->
-        <div class="about-me">
-            <h3>关于我</h3>
-            <p>「welcome！」<br>- 我的个人博客 -</p>
-            <p>姓名：朱武坤<br>性别：男<br>爱好：旅游、摄影、读书<br>年龄：20<br>学号：23170404040<br>专业：大数据技术</p>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="nav-title">罗宇航</h1>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">罗宇航首页</a></li>
+                <li><a href="#">个人经历</a></li>
+                <li><a href="#">学习生活</a></li>
+                <li><a href="#">项目作品</a></li>
+                <li><a href="#">技能特长</a></li>
+                <li><a href="#">社会实践</a></li>
+                <li><a href="#">风景随拍</a></li>
+                <li><a href="#">更多主页</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- 右侧：给我留言 -->
-        <div class="message">
-            <h3>给我留言</h3>
-            <input type="text" placeholder="昵称"><br>
-            <input type="email" placeholder="电子邮件"><br>
-            <input type="tel" placeholder="电话号码"><br>
-            <textarea rows="5" placeholder="留言内容"></textarea><br>
-            <button>发送</button>
+    <!-- 顶部横幅 -->
+    <header class="banner">
+        <img src="images/banner.jpg" alt="风景横幅图" class="banner-img">
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 罗宇航介绍板块 -->
+            <section class="intro-section">
+                <h2 class="section-title">罗宇航介绍</h2>
+                <div class="intro-content">
+                    <p class="intro-text">
+                        罗宇航199X年X月X日出生于XX省XX市，是一名在校大学生，学号23170404004。目前就读于XX大学XX专业，主攻前端开发方向，擅长HTML、CSS、JavaScript等前端技术，熟悉Vue框架基础应用。在校期间，参与过多项前端开发相关的课程设计，独立完成了个人博客网站的搭建与部署。
+                        除了专业学习，罗宇航热爱户外摄影，尤其喜欢记录各地的自然风光，足迹遍布XX、XX等城市的自然景区，用镜头捕捉山川湖海的美好瞬间。同时，他也注重综合能力提升，积极参加校园技术社团活动，与同学交流学习心得，不断精进专业技能。
+                    </p>
+                    <div class="intro-pics">
+                        <img src="images/avatar1.jpg" alt="风景照片1" class="intro-pic">
+                        <img src="images/avatar2.jpg" alt="风景照片2" class="intro-pic">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 热爱风景摄影板块 -->
+            <section class="charm-section">
+                <h2 class="section-title">罗宇航为什么热爱风景摄影</h2>
+                <div class="charm-content">
+                    <div class="charm-pics">
+                        <img src="images/pic1.jpg" alt="风景照片3" class="charm-pic">
+                        <img src="images/pic2.jpg" alt="风景照片4" class="charm-pic">
+                        <img src="images/pic3.jpg" alt="风景视频截图" class="charm-pic">
+                        <img src="images/pic4.jpg" alt="风景照片5" class="charm-pic">
+                    </div>
+                    <div class="charm-text">
+                        <p>
+                            罗宇航热爱风景摄影，源于对自然之美的无限向往。在快节奏的学习生活中，走进自然、用镜头定格山川湖海的瞬间，成为他缓解压力、沉淀内心的方式。每一次按下快门，都是与自然的对话——清晨山间的薄雾、傍晚海边的落日、雨后林间的光影，这些稍纵即逝的美好，都被他用心记录下来。
+                        </p>
+                        <p>
+                            摄影的过程也是学习与成长的过程，为了拍出更有质感的风景照，他主动学习构图、光影运用等摄影技巧，甚至尝试用前端技术制作摄影作品集网页，将自己的摄影作品与专业技能结合。这些风景照片不仅是美好瞬间的留存，更是他对生活热爱的体现，也让他在行走与记录中，拥有了更开阔的视野和更平和的心态。
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p class="footer-text">罗宇航网页设计 © 2025</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
-
 </html>
