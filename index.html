@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7ff; /* 浅蓝色背景 */
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        /* 头部样式 */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 40px;
+            color: #333;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        /* 装饰兔子图标（用文字替代，也可以换图片） */
+        .rabbit {
+            position: absolute;
+            font-size: 40px;
+            color: #fff;
+            text-shadow: 1px 1px 2px #999;
+        }
+        .rabbit1 {
+            top: 10px;
+            right: 50px;
+        }
+        .rabbit2 {
+            bottom: 10px;
+            left: 20px;
+        }
+        .rabbit3 {
+            bottom: 20px;
+            right: 30px;
+        }
+
+        /* 导航栏样式 */
+        .nav {
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 2px solid #f8bbd0;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 30px;
+            font-size: 16px;
+        }
+        .nav a:hover {
+            color: #ff69b4;
+        }
+
+        /* 主体内容容器 */
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* 左侧“关于我”样式 */
+        .about-me {
+            flex: 1;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .about-me h3 {
+            color: #ff69b4;
+            margin-top: 0;
+        }
+        .about-me p {
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        /* 右侧“给我留言”样式 */
+        .message {
+            flex: 2;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .message h3 {
+            background-color: #f8bbd0;
+            color: #fff;
+            padding: 8px;
+            margin-top: 0;
+            border-radius: 3px;
+        }
+        .message input, .message textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .message button {
+            background-color: #f8bbd0;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .message button:hover {
+            background-color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <div class="header">
+        <div class="rabbit rabbit1">🐇</div>
+        <h1>Welcome！<br>- 我的个人主页 -</h1>
+        <div class="rabbit rabbit2">🐇</div>
+        <div class="rabbit rabbit3">🐇</div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="#">首页</a>
+        <a href="#">我的爱好</a>
+        <a href="#">我的日志</a>
+        <a href="#">联系我们</a>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <!-- 左侧：关于我 -->
+        <div class="about-me">
+            <h3>关于我</h3>
+            <p>「welcome！」<br>- 我的个人博客 -</p>
+            <p>姓名：吴垚<br>性别：男<br>爱好：旅游、摄影、读书<br>年龄：20<br>学号：23170404010<br>专业：大数据技术</p>
+        </div>
+
+        <!-- 右侧：给我留言 -->
+        <div class="message">
+            <h3>给我留言</h3>
+            <input type="text" placeholder="昵称"><br>
+            <input type="email" placeholder="电子邮件"><br>
+            <input type="tel" placeholder="电话号码"><br>
+            <textarea rows="5" placeholder="留言内容"></textarea><br>
+            <button>发送</button>
+        </div>
+    </div>
+</body>
+</html>
